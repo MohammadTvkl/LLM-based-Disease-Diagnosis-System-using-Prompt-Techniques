@@ -61,7 +61,7 @@ answer = tokenizer.decode(outputs[0], skip_special_tokens=True)
 print(f"Q: {question}\nA: {answer}")
 ```
 
-## Prompt Engineering Strategies Tested
+## Prompt Engineering Strategies To be Tested
 
 1. **Zero-Shot Prompting**
 2. **Few-Shot Prompting**
@@ -78,14 +78,4 @@ print(f"Q: {question}\nA: {answer}")
 ## Future Work
 
 - Further optimization of prompt techniques.
-- Fine-tuning DiagnosisGPT with additional medical data.
 - Integrating user feedback mechanisms.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Contributions
-
-Contributions are welcome! Feel free to open issues or submit pull requests.
-
