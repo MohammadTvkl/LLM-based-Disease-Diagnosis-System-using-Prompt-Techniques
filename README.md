@@ -21,10 +21,10 @@ to provide efficient and explainable disease diagnosis (privacy-preserving).
 
 | Interface Section | Preview |
 |-------------------|----------|
-| **Symptom Entry & Conditions** | ![Symptom Entry and Conditions](./images/UI-4.jpg) |
-| **Potential Conditions List** | ![Potential Conditions](./images/UI-3.jpg) |
-| **Disease Details (Melanoma Example)** | ![Disease Details](./images/UI-2.jpg) |
-| **Clarifying Questions Section** | ![Clarifying Questions](./images/UI-1.jpg) |
+| **Symptom Entry & Conditions** | ![Symptom Entry and Conditions](./images/UI-1.jpg) |
+| **Potential Conditions List** | ![Potential Conditions](./images/UI-2.jpg) |
+| **Disease Details (Melanoma Example)** | ![Disease Details](./images/UI-3.jpg) |
+| **Clarifying Questions Section** | ![Clarifying Questions](./images/UI-4.jpg) |
 
 ---
 
