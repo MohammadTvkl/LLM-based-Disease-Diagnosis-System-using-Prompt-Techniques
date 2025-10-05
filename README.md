@@ -35,14 +35,24 @@ to provide efficient and explainable disease diagnosis (privacy-preserving).
 
 ---
 
-## 📊 Results Summary
+## 📊 Results
 | Model | Top-1 | Top-3 | Top-5 |
 |-------|-------|-------|-------|
 | GPT-4o | 32% | 50% | 63% |
 | Meerkat-7B (FP16) | 33% | 53% | 56% |
 | Meerkat-7B (4-bit Quantized) | 29% | 52% | 55% |
 
----
+### 🧪 Meerkat-7B (FP16) — Prompting Methods Comparison
+
+| Method | Top-1 (Count / %) | In-List (Top-3) (Count / %) |
+|--------|--------------------|-----------------------------|
+| Zero-Shot | 29 / 25.2% | 63 / 54.8% |
+| Single-Step CoT | 38 / 33.0% | 66 / 57.4% |
+| Least-to-Most | 24 / 20.9% | 54 / 47.0% |
+
+> **Dataset size:** 115 samples  
+> **Description:** Comparison of three prompting strategies (Zero-Shot, Single-Step CoT, Least-to-Most) using the Meerkat-7B (FP16) model.
+
 
 ---
 
