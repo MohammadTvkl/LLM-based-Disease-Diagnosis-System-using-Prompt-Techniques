@@ -17,6 +17,17 @@ to provide efficient and explainable disease diagnosis (privacy-preserving).
 
 ---
 
+### 📸 UI Screenshots
+
+| Interface Section | Preview |
+|-------------------|----------|
+| **Symptom Entry & Conditions** | ![Symptom Entry and Conditions](./images/UI-4.jpg) |
+| **Potential Conditions List** | ![Potential Conditions](./images/UI-3.jpg) |
+| **Disease Details (Melanoma Example)** | ![Disease Details](./images/UI-2.jpg) |
+| **Clarifying Questions Section** | ![Clarifying Questions](./images/UI-1.jpg) |
+
+---
+
 ## 🧬 Technologies
 - Python, PyTorch, Hugging Face Transformers  
 - Prompt Engineering, LLM Reasoning  
