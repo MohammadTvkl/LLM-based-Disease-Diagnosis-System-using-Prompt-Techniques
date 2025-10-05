@@ -1,7 +1,7 @@
 # 🧠 LLM-based Disease Diagnosis System using Prompt Engineering
 
 This project designs a **lightweight medical assistant** using **Meerkat-7B**, a 7B-parameter open medical LLM,
-to provide efficient and explainable disease diagnosis **without internet access** (privacy-preserving).
+to provide efficient and explainable disease diagnosis (privacy-preserving).
 
 ---
 
