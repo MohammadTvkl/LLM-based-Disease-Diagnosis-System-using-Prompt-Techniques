@@ -36,11 +36,18 @@ to provide efficient and explainable disease diagnosis (privacy-preserving).
 ---
 
 ## 📊 Results
-| Model | Top-1 | Top-3 | Top-5 |
-|-------|-------|-------|-------|
-| GPT-4o | 32% | 50% | 63% |
-| Meerkat-7B (FP16) | 33% | 53% | 56% |
-| Meerkat-7B (4-bit Quantized) | 29% | 52% | 55% |
+
+### 🧠 Overall Model Comparison
+
+| Model | Top-1 (%) | Top-3 (%) | Top-5 (%) |
+|--------|-----------|-----------|-----------|
+| GPT-4o | 32 | 50 | 63 |
+| Meerkat-7B (FP16) | 33 | 53 | 56 |
+| Meerkat-7B (Quantized) | 29 | 52 | 55 |
+
+> **Dataset size:** 115 samples  
+> **Description:** Overall accuracy comparison of GPT-4o and Meerkat-7B models (FP16 and Quantized) based on Top-1, Top-3, and Top-5 metrics.
+
 
 ### 🧪 Meerkat-7B (FP16) — Prompting Methods Comparison
 
@@ -53,6 +60,99 @@ to provide efficient and explainable disease diagnosis (privacy-preserving).
 > **Dataset size:** 115 samples  
 > **Description:** Comparison of three prompting strategies (Zero-Shot, Single-Step CoT, Least-to-Most) using the Meerkat-7B (FP16) model.
 
+### 🤖 GPT-4o — Prompting Methods Comparison
+
+| Method | Top-1 (Count / %) | In-List (Top-3) (Count / %) |
+|---------|--------------------|------------------------------|
+| Zero-Shot | 39 / 33.9% | 67 / 58.3% |
+| Single-Step CoT | 33 / 28.7% | 61 / 53.0% |
+| Least-to-Most | 34 / 29.6% | 51 / 44.4% |
+
+> **Dataset size:** 115 samples  
+> **Description:** Comparison of three prompting strategies (Zero-Shot, Single-Step CoT, Least-to-Most) using the GPT-4o model.
+
+### ⚙️ Meerkat-7B (4-bit Quantized) — Prompting Methods Comparison
+
+| Method | Top-1 (Count / %) | In-List (Top-3) (Count / %) |
+|---------|--------------------|------------------------------|
+| Zero-Shot | 27 / 23.7% | 60 / 52.1% |
+| Single-Step CoT | 33 / 28.7% | 61 / 53.0% |
+| Least-to-Most | 25 / 21.7% | 51 / 44.4% |
+
+> **Dataset size:** 115 samples  
+> **Description:** Comparison of three prompting strategies (Zero-Shot, Single-Step CoT, Least-to-Most) using the Meerkat-7B (4-bit Quantized) model.
+
+### 📊 Overall Performance Comparison — GPT-4o vs Meerkat-7B (Full Dataset)
+
+| Metric | Meerkat-7B (CoT) — Count / % | GPT-4o (Zero-Shot) — Count / % |
+|---------|------------------------------|--------------------------------|
+| Top-1 | 356 / 31.0% | 339 / 30.0% |
+| Top-3 | 621 / 54.0% | 569 / 50.0% |
+| Top-5 | 677 / 59.0% | 690 / 60.0% |
+
+> **Dataset size:** 1148 samples  
+> **Description:** Overall diagnostic performance comparison between Meerkat-7B (Chain-of-Thought prompting) and GPT-4o (Zero-Shot prompting) across the full evaluation dataset.
+
+### 🏥 Department-wise Performance — GPT-4o (Zero-Shot) vs Meerkat-7B (CoT)
+
+| Department | Top-1 (%) GPT-4o | Top-1 (%) Meerkat | Top-3 (%) GPT-4o | Top-3 (%) Meerkat | Top-5 (%) GPT-4o | Top-5 (%) Meerkat |
+|-------------|------------------|-------------------|------------------|-------------------|------------------|-------------------|
+| Surgery | 30 | 19 | 46 | 40 | 56 | 52 |
+| Obstetrics & Gynecology | 26 | 31 | 41 | 58 | 56 | 67 |
+| Internal Medicine | 23 | 30 | 44 | 52 | 57 | 59 |
+| Dentistry | 25 | 14 | 54 | 38 | 61 | 40 |
+| Neurology | 38 | 43 | 54 | 57 | 61 | 61 |
+| Oncology | 21 | 21 | 41 | 36 | 52 | 43 |
+| Orthopedics | 33 | 28 | 53 | 54 | 58 | 55 |
+| Pediatrics | 34 | 31 | 42 | 37 | 56 | 41 |
+| Otorhinolaryngology | 30 | 27 | 50 | 56 | 62 | 61 |
+| Reprod. & Men's Health | 19 | 21 | 34 | 41 | 48 | 42 |
+| Dermatovenereology | 28 | 31 | 60 | 69 | 69 | 73 |
+| Other | 20 | 38 | 32 | 63 | 56 | 69 |
+| Psychology | 58 | 67 | 80 | 87 | 86 | 88 |
+| Hematology | 25 | 29 | 54 | 48 | 58 | 50 |
+| Infectious Diseases & Immunology | 26 | 30 | 48 | 59 | 52 | 67 |
+
+> **Description:** Department-level Top-1, Top-3, and Top-5 accuracies comparing GPT-4o (Zero-Shot) and Meerkat-7B (CoT).  
+> Values are rounded percentages based on 15 departments across the DxBench dataset.
+
+### 🩺 Department-wise Top-1 Accuracy Comparison
+
+| Department | GPT-4o (%) | Meerkat-7B (FP16) (%) | Meerkat-7B (Quantized) (%) |
+|-------------|------------|------------------------|-----------------------------|
+| Surgery | 22 | 22 | 11 |
+| Obstetrics & Gynecology | 40 | 20 | 20 |
+| Internal Medicine | 10 | 40 | 40 |
+| Dentistry | 14 | 14 | 14 |
+| Neurology | 38 | 25 | 25 |
+| Oncology | 33 | 33 | 17 |
+| Orthopedics | 33 | 33 | 33 |
+| Pediatrics | 17 | 17 | 50 |
+| Otorhinolaryngology | 50 | 12 | 12 |
+| Reproductive & Men’s Health | 43 | 57 | 57 |
+| Dermatovenereology | 50 | 42 | 33 |
+| Other | 14 | 29 | 29 |
+| Psychology | 50 | 62 | 62 |
+| Hematology | 20 | 40 | 0 |
+| Infectious Diseases & Immunology | 33 | 67 | 0 |
+
+> **Description:** Department-level Top-1 accuracy comparison between GPT-4o, Meerkat-7B (FP16), and Meerkat-7B (4-bit Quantized) models.
+
+### ⏱️ Inference Time Summary — Meerkat-7B Models
+
+| Metric | Meerkat-7B (Single-Step CoT) | Meerkat-7B (Quantized) |
+|---------|------------------------------|-------------------------|
+| Number of Samples | 1148 | 115 |
+| Mean | 45.10 | 47.93 |
+| Median | 44.13 | 47.10 |
+| Minimum | 18.41 | 31.47 |
+| Maximum | 119.22 | 81.89 |
+| P90 | 55.55 | 59.59 |
+| P95 | 60.02 | 64.84 |
+| P99 | 72.01 | 72.38 |
+
+> **Units:** seconds (s)  
+> **Description:** Statistical summary of inference times for Meerkat-7B under two configurations — 4-bit Quantized and Single-Step CoT precision.
 
 ---
 
