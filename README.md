@@ -138,6 +138,57 @@ to provide efficient and explainable disease diagnosis (privacy-preserving).
 
 > **Description:** Department-level Top-1 accuracy comparison between GPT-4o, Meerkat-7B (FP16), and Meerkat-7B (4-bit Quantized) models.
 
+### 🩺 Department-wise Top-3 Accuracy Comparison
+
+| Department | GPT-4o (%) | Meerkat-7B (FP16) (%) | Meerkat-7B (Quantized) (%) |
+|-------------|------------|------------------------|-----------------------------|
+| Surgery | 56 | 33 | 22 |
+| Obstetrics & Gynecology | 70 | 50 | 40 |
+| Internal Medicine | 20 | 50 | 50 |
+| Dentistry | 71 | 57 | 43 |
+| Neurology | 38 | 38 | 38 |
+| Oncology | 33 | 33 | 33 |
+| Orthopedics | 44 | 56 | 33 |
+| Pediatrics | 17 | 17 | 50 |
+| Otorhinolaryngology | 62 | 75 | 75 |
+| Reproductive & Men’s Health | 57 | 57 | 71 |
+| Dermatovenereology | 67 | 58 | 67 |
+| Other | 43 | 57 | 57 |
+| Psychology | 62 | 88 | 100 |
+| Hematology | 40 | 60 | 60 |
+| Infectious Diseases & Immunology | 67 | 67 | 33 |
+
+> **Description:**  
+> The Top-3 accuracy results demonstrate that both **Meerkat-7B models** perform strongly across departments,  
+> with outstanding results in **Psychology**, **Otorhinolaryngology**, and **Reproductive & Men’s Health**.
+
+
+### 🩺 Department-wise Top-5 Accuracy Comparison
+
+| Department | GPT-4o (%) | Meerkat-7B (FP16) (%) | Meerkat-7B (Quantized) (%) |
+|-------------|------------|------------------------|-----------------------------|
+| Surgery | 67 | 33 | 22 |
+| Obstetrics & Gynecology | 90 | 60 | 50 |
+| Internal Medicine | 50 | 70 | 50 |
+| Dentistry | 71 | 57 | 43 |
+| Neurology | 38 | 38 | 38 |
+| Oncology | 50 | 33 | 33 |
+| Orthopedics | 56 | 56 | 44 |
+| Pediatrics | 50 | 17 | 50 |
+| Otorhinolaryngology | 75 | 75 | 75 |
+| Reproductive & Men’s Health | 57 | 57 | 71 |
+| Dermatovenereology | 75 | 58 | 67 |
+| Other | 71 | 57 | 57 |
+| Psychology | 62 | 88 | 100 |
+| Hematology | 40 | 60 | 80 |
+| Infectious Diseases & Immunology | 67 | 67 | 33 |
+
+> **Description:**  
+> Top-5 accuracy results show that **Meerkat-7B** maintains wide diagnostic coverage across medical departments.  
+> It performs exceptionally well in **Psychology**, **Otorhinolaryngology**, and **Reproductive & Men’s Health**.
+
+
+
 ### ⏱️ Inference Time Summary — Meerkat-7B Models
 
 | Metric | Meerkat-7B (Single-Step CoT) | Meerkat-7B (Quantized) |
